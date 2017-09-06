@@ -1,9 +1,9 @@
 <h1>Bog Critters</h1>
+<%= link_to "New Critter", new_creature_path%>
 
 <% @creatures.each do |creature| %>
   <p>
-    <label>Name:</label> <%= creature.name %><br>
+    <label>Name:</label> <%= link_to "#{creature.name}", creature_path(creature.id) %><br>
     <label>Description:</label> <%= creature.description %>
   </p>
-  
 <% end %>
