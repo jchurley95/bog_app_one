@@ -1,1 +1,11 @@
-<h1>Edit </h1>
+<h1>Edit <%= @creature.name%> </h1>
+
+<%= render "partials/creature_form", creature: @creature %>
+<br />
+<%= link_to creatures_path do%>
+<div><button>Edit <%= @creature.name %></button></div>
+<%end%>
+<br />
+<%=link_to creature_path(@creature.id), method: :delete, data: {confirm: "Are you sure?"}  do%> 
+<div><button>Delete <%= @creature.name %></button></div>
+<%end%>
